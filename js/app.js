@@ -6,7 +6,8 @@
 
 const charDiv = document.getElementById("phrase");
 const charUl = charDiv.firstElementChild;
-console.log(charUl);
+
+
 
 // console.log(charUl);
 const logPhrase = (phrase) => {
@@ -19,8 +20,8 @@ const logPhrase = (phrase) => {
     logPhrase(game.getRandomPhrase());
     logPhrase(game.getRandomPhrase());
     
-const randomPhrase = game.getRandomPhrase();
-const phrase = new Phrase(randomPhrase.phrase);
-phrase.addPhraseToDisplay();
+// const randomPhrase = game.getRandomPhrase();
+// const phrase = new Phrase(randomPhrase.phrase);
+// phrase.addPhraseToDisplay();
 
 document.getElementById("btn__reset").addEventListener('click', () => game.startGame());
