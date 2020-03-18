@@ -3,7 +3,7 @@
  * app.js */
 const game = new Game();
 
-game.phrases.forEach((phrase, index) => {
+game.phrase.forEach((phrase, index) => {
     console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
     });
     

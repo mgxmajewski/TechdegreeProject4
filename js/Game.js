@@ -5,7 +5,7 @@
  class Game{
      constructor(){
          this.missed = 0;
-         this.phrases = this.createPhrases();
+         this.phrase = this.createPhrases();
          this.activePhrase = null;
      }
 
@@ -16,10 +16,10 @@
 
      createPhrases() {
          const randomPhrase = [
-             'Teamtreehouse Techdegree',
-             'Javascript is cool',
-             'Coding is fun',
-             'Object priented programming' 
+             new Phrase('Teamtreehouse Techdegree'),
+             new Phrase('Javascript is cool'),
+             new Phrase('Coding is fun'),
+             new Phrase('Object priented programming') 
          ];
          return randomPhrase;
      }
