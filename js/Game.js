@@ -19,8 +19,13 @@
              new Phrase('Teamtreehouse Techdegree'),
              new Phrase('Javascript is cool'),
              new Phrase('Coding is fun'),
-             new Phrase('Object priented programming') 
+             new Phrase('Object oriented programming') 
          ];
          return randomPhrase;
      }
+
+     getRandomPhrase() {
+        return this.phrase[Math.floor(Math.random()* this.phrase.length)]
+     }
+
  }
