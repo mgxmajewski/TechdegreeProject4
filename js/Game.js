@@ -28,4 +28,9 @@
         return this.phrase[Math.floor(Math.random()* this.phrase.length)]
      }
 
+     startGame() {
+         const ovarlayDiv = document.getElementById(`overlay`)
+         ovarlayDiv.style.display = 'none';
+     }
+
  }

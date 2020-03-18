@@ -22,3 +22,5 @@ const logPhrase = (phrase) => {
 const randomPhrase = game.getRandomPhrase();
 const phrase = new Phrase(randomPhrase.phrase);
 phrase.addPhraseToDisplay();
+
+document.getElementById("btn__reset").addEventListener('click', () => game.startGame());
