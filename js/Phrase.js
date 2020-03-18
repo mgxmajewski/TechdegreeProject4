@@ -22,4 +22,14 @@
                 }
         }
      }
+
+     checkLetter(e) {
+        for (let i = 0; i < this.phrase.length; i++){
+            if(this.phrase.includes(e)){
+              return true;
+            } else { 
+                return false;
+            }   
+        }
+    }
  }

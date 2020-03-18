@@ -3,25 +3,27 @@
  * app.js */
        
        
-
+const game = new Game();
+const letters = new Phrase();
 const charDiv = document.getElementById("phrase");
 const charUl = charDiv.firstElementChild;
 
 
-
 // console.log(charUl);
-const logPhrase = (phrase) => {
-    console.log(`Phrase - phrase: `, phrase.phrase);
-    };
-    const game = new Game();
-    logPhrase(game.getRandomPhrase());
-    logPhrase(game.getRandomPhrase());
-    logPhrase(game.getRandomPhrase());
-    logPhrase(game.getRandomPhrase());
-    logPhrase(game.getRandomPhrase());
+// const logPhrase = (phrase) => {
+//     console.log(`Phrase - phrase: `, phrase.phrase);
+//     };
+//     // const game = new Game();
+//     logPhrase(game.getRandomPhrase());
+//     logPhrase(game.getRandomPhrase());
+//     logPhrase(game.getRandomPhrase());
+//     logPhrase(game.getRandomPhrase());
+//     logPhrase(game.getRandomPhrase());
     
-// const randomPhrase = game.getRandomPhrase();
+// // const randomPhrase = game.getRandomPhrase();
 // const phrase = new Phrase(randomPhrase.phrase);
 // phrase.addPhraseToDisplay();
 
 document.getElementById("btn__reset").addEventListener('click', () => game.startGame());
+// const letters = new Phrase ();
+// phrase.checkLetter();
