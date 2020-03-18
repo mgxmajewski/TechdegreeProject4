@@ -6,4 +6,20 @@
      constructor(phrase){
          this.phrase = phrase;
      }
+     
+     addPhraseToDisplay() {
+        const char = this.phrase.split('');
+        for (let i = 0; i < char.length; i++){
+            let charLi = document.createElement('li')
+                if (char[i] !== ' ') {
+                    charLi.classList.add("hide", "letter", char[i]);
+                    charLi.textContent = char[i];
+                    charUl.appendChild(charLi);
+                }   else if (char[i] === ' ') {
+                    charLi.className = "space";
+                    charLi.innerText = char[i];
+                    charUl.appendChild(charLi);
+                }
+        }
+     }
  }
