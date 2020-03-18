@@ -23,13 +23,29 @@
         }
      }
 
-     checkLetter(e) {
+     checkLetter(letter) {
         for (let i = 0; i < this.phrase.length; i++){
-            if(this.phrase.includes(e)){
+            if(this.phrase.includes(letter)){
               return true;
             } else { 
                 return false;
             }   
         }
     }
+
+     showMatchedLetter(letter) {
+         const phraseChar = document.getElementsByClassName(letter);
+         console.log(phraseChar);
+         for(let i = 0; i < phraseChar.length; i++){
+            if(letter === phraseChar) {
+                phraseChar[i].classList.remove("hide");
+            } else {
+                phraseChar[i].classList.add("show");
+            }
+         }
+         
+     }
+
+
+
  }

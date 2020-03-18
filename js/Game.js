@@ -38,6 +38,7 @@
          console.log(charUl);
          console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
          phrase.checkLetter('a');
+         phrase.showMatchedLetter();
      }
  }
 
