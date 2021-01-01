@@ -6,7 +6,7 @@
      constructor(){
          this.missed = 0;
          this.phrase = this.createPhrases();
-         this.activePhrase = null
+         this.activePhrase = null;
      }
 
      /**
@@ -29,8 +29,8 @@
      }
 
      startGame() {
-         const ovarlayDiv = document.getElementById(`overlay`)
-         ovarlayDiv.style.display = 'none';
+         const overlayDiv = document.getElementById(`overlay`);
+         overlayDiv.style.display = 'none';
          const randomPhrase = game.getRandomPhrase();
          const phrase = new Phrase(randomPhrase.phrase);
          this.activePhrase = this.getRandomPhrase();
@@ -40,5 +40,10 @@
          phrase.checkLetter('a');
          phrase.showMatchedLetter();
      }
+
+    //  checkForWin() {
+         
+         
+    //  }
  }
 

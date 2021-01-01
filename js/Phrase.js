@@ -15,23 +15,23 @@
                     charLi.classList.add("hide", "letter", char[i]);
                     charLi.textContent = char[i];
                     charUl.appendChild(charLi);
-                }   else if (char[i] === ' ') {
+                 } else if (char[i] === ' ') {
                     charLi.className = "space";
                     charLi.innerText = char[i];
                     charUl.appendChild(charLi);
-                }
-        }
+                 }
+         }
      }
 
      checkLetter(letter) {
         for (let i = 0; i < this.phrase.length; i++){
-            if(this.phrase.includes(letter)){
+            if (this.phrase.includes(letter)){
               return true;
-            } else { 
+            } else {
                 return false;
-            }   
-        }
-    }
+            }
+         }
+     }
 
      showMatchedLetter(letter) {
          const phraseChar = document.getElementsByClassName(letter);
@@ -43,9 +43,6 @@
                 phraseChar[i].classList.add("show");
             }
          }
-         
      }
-
-
-
+     
  }
