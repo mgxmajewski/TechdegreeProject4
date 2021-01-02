@@ -16,7 +16,7 @@
 
      createPhrases() {
          const randomPhrase = [
-             new Phrase('Teamtreehouse Techdegree'),
+             new Phrase('Team Treehouse Tech degree'),
              new Phrase('Javascript is cool'),
              new Phrase('Coding is fun'),
              new Phrase('Object oriented programming') 
@@ -35,7 +35,6 @@
          const phrase = new Phrase(randomPhrase.phrase);
          this.activePhrase = this.getRandomPhrase();
          phrase.addPhraseToDisplay();
-         console.log(charUl);
          console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
          phrase.checkLetter('a');
          phrase.showMatchedLetter();

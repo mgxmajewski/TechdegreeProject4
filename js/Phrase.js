@@ -6,19 +6,25 @@
      constructor(phrase){
          this.phrase = phrase;
      }
-     
+
+     /**
+      * Display phrase on game board
+      */
+
      addPhraseToDisplay() {
+        const phraseUl = document.getElementById('phrase');
         const char = this.phrase.split('');
+        console.log(char);
         for (let i = 0; i < char.length; i++){
-            let charLi = document.createElement('li')
+            let charLi = document.createElement('li');
                 if (char[i] !== ' ') {
                     charLi.classList.add("hide", "letter", char[i]);
                     charLi.textContent = char[i];
-                    charUl.appendChild(charLi);
+                    phraseUl.appendChild(charLi);
                  } else if (char[i] === ' ') {
                     charLi.className = "space";
                     charLi.innerText = char[i];
-                    charUl.appendChild(charLi);
+                    phraseUl.appendChild(charLi);
                  }
          }
      }

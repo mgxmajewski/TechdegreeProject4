@@ -39,14 +39,14 @@ document.getElementById("btn__reset").addEventListener('click', () => game.start
 // });
 
 //Test 3 - checks if getRandomPhrase() generates random phrase
-const logPhrase = (phrase) =>{
-    console.log(`Phrase: ${phrase.phrase}`);
-}
-
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
+// const logPhrase = (phrase) =>{
+//     console.log(`Phrase: ${phrase.phrase}`);
+// }
+//
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
 
