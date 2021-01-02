@@ -28,12 +28,25 @@ document.getElementById("btn__reset").addEventListener('click', () => game.start
 // const letters = new Phrase ();
 // phrase.checkLetter();
 
-//Test  1
+//Test 1 - checks constructor correctness
 // const phrase = new Phrase("Life is like a box of chocolates")
 //console.log(`${phrase.phrase}`);
 
 
-//Test 2
-game.phrase.forEach((phrase, index) => {
-    console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
-});
+//Test 2 - checks existence of array with phrases
+// game.phrase.forEach((phrase, index) => {
+//     console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
+// });
+
+//Test 3 - checks if getRandomPhrase() generates random phrase
+const logPhrase = (phrase) =>{
+    console.log(`Phrase: ${phrase.phrase}`);
+}
+
+logPhrase(game.getRandomPhrase());
+logPhrase(game.getRandomPhrase());
+logPhrase(game.getRandomPhrase());
+logPhrase(game.getRandomPhrase());
+logPhrase(game.getRandomPhrase());
+logPhrase(game.getRandomPhrase());
+
