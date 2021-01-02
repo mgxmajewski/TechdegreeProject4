@@ -33,12 +33,12 @@ document.getElementById("btn__reset").addEventListener('click', () => game.start
 //console.log(`${phrase.phrase}`);
 
 
-//Test 2 - checks existence of array with phrases
+//Test 2 - check existence of array with phrases
 // game.phrase.forEach((phrase, index) => {
 //     console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
 // });
 
-//Test 3 - checks if getRandomPhrase() generates random phrase
+//Test 3 - check if getRandomPhrase() generates random phrase
 // const logPhrase = (phrase) =>{
 //     console.log(`Phrase: ${phrase.phrase}`);
 // }
@@ -50,3 +50,6 @@ document.getElementById("btn__reset").addEventListener('click', () => game.start
 // logPhrase(game.getRandomPhrase());
 // logPhrase(game.getRandomPhrase());
 
+//Test 4 - check if addPhraseToDisplay() appends letters as "li's" into phrase "ul"
+// game.startGame();
+// console.log(document.getElementById('phrase').innerHTML);

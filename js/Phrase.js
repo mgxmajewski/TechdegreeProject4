@@ -40,7 +40,7 @@
      }
 
      showMatchedLetter(letter) {
-         const phraseChar = document.getElementsByClassName(letter);
+         const phraseChar = document.getElementsByClassName('letter');
          console.log(phraseChar);
          for(let i = 0; i < phraseChar.length; i++){
             if(letter === phraseChar) {
