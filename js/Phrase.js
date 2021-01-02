@@ -29,16 +29,22 @@
          }
      }
 
+     /**
+      * Checks if passed letter is in phrase
+      * @param letter
+      */
      checkLetter(letter) {
-        for (let i = 0; i < this.phrase.length; i++){
-            if (this.phrase.includes(letter)){
-              return true;
-            } else {
-                return false;
+        for (let i = 0; i < game.activePhrase.phrase.length; i++) {
+            if (game.activePhrase.phrase.includes(letter)){
+                return true;
             }
-         }
+        }
      }
 
+     /**
+      * Displays passed letter on screen after a match is found
+      * @param (string) letter - Letter to display
+      */
      showMatchedLetter(letter) {
          const phraseChar = document.getElementsByClassName('letter');
          console.log(phraseChar);
@@ -50,5 +56,4 @@
             }
          }
      }
-     
  }
