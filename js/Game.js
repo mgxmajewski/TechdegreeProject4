@@ -35,7 +35,7 @@
          const phrase = new Phrase(randomPhrase.phrase);
          this.activePhrase = this.getRandomPhrase();
          phrase.addPhraseToDisplay();
-         console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+         //console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
      }
 
 
