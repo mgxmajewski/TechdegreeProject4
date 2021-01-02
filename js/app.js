@@ -4,9 +4,9 @@
        
        
 const game = new Game();
-const letters = new Phrase();
-const charDiv = document.getElementById("phrase");
-const charUl = charDiv.firstElementChild;
+const phrase = new Phrase();
+//const charDiv = document.getElementById("phrase");
+//const charUl = charDiv.firstElementChild;
 
 
 // console.log(charUl);
@@ -27,3 +27,13 @@ const charUl = charDiv.firstElementChild;
 document.getElementById("btn__reset").addEventListener('click', () => game.startGame());
 // const letters = new Phrase ();
 // phrase.checkLetter();
+
+//Test  1
+// const phrase = new Phrase("Life is like a box of chocolates")
+//console.log(`${phrase.phrase}`);
+
+
+//Test 2
+game.phrase.forEach((phrase, index) => {
+    console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
+});
