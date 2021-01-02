@@ -53,3 +53,7 @@ document.getElementById("btn__reset").addEventListener('click', () => game.start
 //Test 4 - check if addPhraseToDisplay() appends letters as "li's" into phrase "ul"
 // game.startGame();
 // console.log(document.getElementById('phrase').innerHTML);
+
+//Test 5 - check if value of game.activePhrase.phrase is updated after startGame()
+// game.startGame();
+// console.log(`Active Phrase: ${game.activePhrase.phrase}`);
