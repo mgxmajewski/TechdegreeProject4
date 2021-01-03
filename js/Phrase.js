@@ -35,10 +35,11 @@
       */
      checkLetter(letter) {
         for (let i = 0; i < game.activePhrase.length; i++) {
-            if (game.activePhrase.includes(letter)) {
+            if (game.activePhrase.toLowerCase().includes(letter.toLowerCase())) {
                 this.showMatchedLetter(letter);
                 return true;
             } else {
+                game.removeLife();
                 return false;
             }
         }
