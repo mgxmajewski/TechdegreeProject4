@@ -34,8 +34,9 @@
       * @param (string) letter - Letter to check
       */
      checkLetter(letter) {
-        for (let i = 0; i < game.activePhrase.phrase.length; i++) {
-            if (game.activePhrase.phrase.includes(letter)) {
+        for (let i = 0; i < game.activePhrase.length; i++) {
+            if (game.activePhrase.includes(letter)) {
+                this.showMatchedLetter(letter);
                 return true;
             } else {
                 return false;
@@ -48,7 +49,7 @@
       * @param (string) letter - Letter to display
       */
      showMatchedLetter(letter) {
-         const phraseChars = this.phrase;
+         const phraseChars = game.activePhrase;
          for(let i = 0; i < phraseChars.length; i++){
              let phraseChar = phraseChars[i];
              console.log('test console');
