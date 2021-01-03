@@ -77,10 +77,17 @@
       * @param {boolean} gameWon - Whether or not the user won the game
       */
      gameOver(gameWon) {
+         const overlayDiv = document.getElementById(`overlay`);
+         const gameOverMessage = document.getElementById('game-over-message');
+         overlayDiv.style.display = '';
+         overlayDiv.classList.remove('start');
+
          if (gameWon === true) {
-             console.log('you win');
+             overlayDiv.classList.add('win');
+             gameOverMessage.innerText = 'WIN';
          } else {
-             console.log('you loose');
+             overlayDiv.classList.add('lose');
+             gameOverMessage.innerText = 'LOOSE';
          }
      };
  }
