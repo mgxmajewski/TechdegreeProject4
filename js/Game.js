@@ -63,7 +63,7 @@
          let livesMissedGameOver = 5;
          let missedGuesses = this.missed;
          let usersLives = document.getElementsByClassName('tries');
-         usersLives.item(missedGuesses).style.display = "none";
+         usersLives.item(missedGuesses).firstChild.src = "images/lostHeart.png";
          console.log(this.missed);
          console.log(usersLives);
          this.missed++;
