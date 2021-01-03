@@ -59,12 +59,25 @@
       * Removes a life from the scoreboard
       * Checks if player has remaining lives and ends game if player is out
       */
-     removeLife() {};
+     removeLife() {
+         let livesMissedGameOver = 5;
+         let missedGuesses = this.missed;
+         let usersLives = document.getElementsByClassName('tries');
+         usersLives.item(missedGuesses).style.display = "none";
+         console.log(this.missed);
+         console.log(usersLives);
+         this.missed++;
+         if (this.missed === livesMissedGameOver) {
+             this.gameOver(false);
+         }
+     };
 
      /**
       * Displays game over message
       * @param {boolean} gameWon - Whether or not the user won the game
       */
-     gameOver(gameWon) {};
+     gameOver(gameWon) {
+         console.log(gameWon);
+     };
  }
 
