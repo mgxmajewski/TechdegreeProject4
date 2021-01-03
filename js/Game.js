@@ -77,7 +77,11 @@
       * @param {boolean} gameWon - Whether or not the user won the game
       */
      gameOver(gameWon) {
-         console.log(gameWon);
+         if (gameWon === true) {
+             console.log('you win');
+         } else {
+             console.log('you loose');
+         }
      };
  }
 
