@@ -5,7 +5,7 @@
  class Game{
      constructor(){
          this.missed = 0;
-         this.phrase = this.createPhrases();
+         this.phrases = this.createPhrases();
          this.activePhrase = null;
      }
 
@@ -25,7 +25,7 @@
      }
 
      getRandomPhrase() {
-        return this.phrase[Math.floor(Math.random()* this.phrase.length)]
+        return this.phrases[Math.floor(Math.random()* this.phrases.length)]
      }
 
      startGame() {
@@ -33,8 +33,9 @@
          overlayDiv.style.display = 'none';
          const randomPhrase = game.getRandomPhrase();
          const phrase = new Phrase(randomPhrase.phrase);
-         this.activePhrase = this.getRandomPhrase();
+         this.activePhrase = phrase.phrase;
          phrase.addPhraseToDisplay();
+         console.log(this.activePhrase);
          //console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
      }
 
