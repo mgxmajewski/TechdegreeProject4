@@ -14,12 +14,20 @@
 * @return {array} An array of phrases that could be used in the game
 */
 
+     // createPhrases() {
+     //     const randomPhrase = [
+     //         new Phrase('Team Treehouse Tech degree'),
+     //         new Phrase('Javascript is cool'),
+     //         new Phrase('Coding is fun'),
+     //         new Phrase('Object oriented programming')
+     //     ];
+     //     return randomPhrase;
+     // }
+
      createPhrases() {
          const randomPhrase = [
-             new Phrase('Team Treehouse Tech degree'),
-             new Phrase('Javascript is cool'),
-             new Phrase('Coding is fun'),
-             new Phrase('Object oriented programming') 
+             new Phrase('Tea'),
+             // new Phrase('Cod')
          ];
          return randomPhrase;
      }
@@ -44,7 +52,10 @@
       * @return {boolean} True if game has been won, false if game wasn't
       won
       */
-     checkForWin() {};
+     checkForWin() {
+
+
+     };
 
      /**
       * Increases the value of the missed property

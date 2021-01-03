@@ -48,17 +48,18 @@
       * @param (string) letter - Letter to display
       */
      showMatchedLetter(letter) {
-         const phraseChars = game.activePhrase.phrase.split('');
+         const phraseChars = this.phrase;
          console.log(phraseChars);
          for(let i = 0; i < phraseChars.length; i++){
              let phraseChar = phraseChars[i];
 
              //let liClassList = charLi.classList[0];
             if(phraseChar === letter) {
-                let charLi = document.getElementsByClassName(`hide letter ${phraseChar}` );
-                // console.log(charLi);
-                charLi.item(0).classList.add('show');
-                charLi[0].classList.remove('hide');
+                let charLi = document.getElementsByClassName(`letter`);
+                while (charLi.length > 0) {
+                    charLi.item(0).classList.add('show');
+                    charLi[0].classList.remove('hide');
+                }
                 // charLi = `<li className="hide letter ${phraseChar}">b</li>`;
                 //console.log(liClassList);
             }
