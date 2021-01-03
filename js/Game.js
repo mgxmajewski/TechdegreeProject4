@@ -44,15 +44,7 @@
       * @return {boolean} True if game has been won, false if game wasn't
       won
       */
-     checkForWin() {
-         let phraseToCompare = this.activePhrase.phrase;
-         let charsGuessed = document.getElementsByClassName('show');
-         if (phraseToCompare.length === charsGuessed.length) {
-             return true;
-         } else {
-             return false;
-         }
-     };
+     checkForWin() {};
 
      /**
       * Increases the value of the missed property
