@@ -5,10 +5,23 @@
        
 const game = new Game();
 const phrase = new Phrase();
+
+/**
+ * Handles onscreen keyboard button clicks
+ * @param (HTMLButtonElement) button - The clicked button element
+ */
+// snippet from https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+const keyboard = document.querySelectorAll(".key");
+for (let key of keyboard) {
+    key.addEventListener("click", (e) => {
+        if (e.target.classList.contains("key")) {
+            console.log(e.target.innerText);
+        }
+    })
+}
+
 //const charDiv = document.getElementById("phrase");
 //const charUl = charDiv.firstElementChild;
-
-
 // console.log(charUl);
 // const logPhrase = (phrase) => {
 //     console.log(`Phrase - phrase: `, phrase.phrase);
