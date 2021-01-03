@@ -53,8 +53,13 @@
       won
       */
      checkForWin() {
-
-
+        let pharseToCompare = this.activePhrase.phrase;
+        let charsGuessed = document.getElementsByClassName('show');
+        if (pharseToCompare.length === charsGuessed.length) {
+            return true;
+        } else {
+            return false;
+        }
      };
 
      /**

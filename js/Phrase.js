@@ -49,13 +49,12 @@
       */
      showMatchedLetter(letter) {
          const phraseChars = this.phrase;
-         console.log(phraseChars);
          for(let i = 0; i < phraseChars.length; i++){
              let phraseChar = phraseChars[i];
-
+             console.log('test console');
              //let liClassList = charLi.classList[0];
             if(phraseChar === letter) {
-                let charLi = document.getElementsByClassName(`letter`);
+                let charLi = document.getElementsByClassName(`hide letter ${phraseChar}`);
                 while (charLi.length > 0) {
                     charLi.item(0).classList.add('show');
                     charLi[0].classList.remove('hide');
