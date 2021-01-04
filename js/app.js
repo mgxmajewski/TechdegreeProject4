@@ -6,18 +6,29 @@
 const game = new Game();
 const phrase = new Phrase();
 
-/**
- * Handles onscreen keyboard button clicks
- * @param (HTMLButtonElement) button - The clicked button element
- */
-// snippet from https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+
 const keyboard = document.querySelectorAll(".key");
 for (let key of keyboard) {
     key.addEventListener("click", (e) => {
         if (e.target.classList.contains("key")) {
-            console.log(e.target.innerText);
+            let keyPressedHTML = e.target;
+            return handleInteraction(keyPressedHTML);
         }
     })
+}
+
+function handleInteraction(keyPressedHTML) {
+    keyPressedHTML.disabled = true;
+    keyPressedHTML.style.backgroundColor = 'grey';
+    keyPressedHTML.style.cursor = 'no-drop';
+    let keyPressedText = keyPressedHTML.innerText;
+    phrase.checkLetter(keyPressedText);
+    console.log(keyPressedText);
+    if (phrase.checkLetter(keyPressedText)) {
+        phrase.showMatchedLetter(keyPressedText);
+    } else {
+        game.removeLife();
+    }
 }
 
 //const charDiv = document.getElementById("phrase");
