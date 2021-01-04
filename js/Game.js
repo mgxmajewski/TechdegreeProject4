@@ -39,6 +39,19 @@
          //console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
      }
 
+     handleInteraction(keyPressedHTML) {
+         keyPressedHTML.disabled = true;
+         keyPressedHTML.style.backgroundColor = 'grey';
+         keyPressedHTML.style.cursor = 'no-drop';
+         let keyPressedText = keyPressedHTML.innerText;
+         phrase.checkLetter(keyPressedText);
+         console.log(keyPressedText);
+         if (phrase.checkLetter(keyPressedText)) {
+             phrase.showMatchedLetter(keyPressedText);
+         } else {
+             game.removeLife();
+         }
+     }
 
      /**
       * Checks for winning move
@@ -90,6 +103,7 @@
              overlayDiv.classList.add('lose');
              gameOverMessage.innerText = 'LOOSE';
          }
+         this.activePhrase = null;
      };
  }
 
