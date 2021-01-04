@@ -12,24 +12,24 @@ for (let key of keyboard) {
     key.addEventListener("click", (e) => {
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
-            return handleInteraction(keyPressedHTML);
+            return game.handleInteraction(keyPressedHTML);
         }
     })
 }
 
-function handleInteraction(keyPressedHTML) {
-    keyPressedHTML.disabled = true;
-    keyPressedHTML.style.backgroundColor = 'grey';
-    keyPressedHTML.style.cursor = 'no-drop';
-    let keyPressedText = keyPressedHTML.innerText;
-    phrase.checkLetter(keyPressedText);
-    console.log(keyPressedText);
-    if (phrase.checkLetter(keyPressedText)) {
-        phrase.showMatchedLetter(keyPressedText);
-    } else {
-        game.removeLife();
-    }
-}
+// function handleInteraction(keyPressedHTML) {
+//     keyPressedHTML.disabled = true;
+//     keyPressedHTML.style.backgroundColor = 'grey';
+//     keyPressedHTML.style.cursor = 'no-drop';
+//     let keyPressedText = keyPressedHTML.innerText;
+//     phrase.checkLetter(keyPressedText);
+//     console.log(keyPressedText);
+//     if (phrase.checkLetter(keyPressedText)) {
+//         phrase.showMatchedLetter(keyPressedText);
+//     } else {
+//         game.removeLife();
+//     }
+// }
 
 //const charDiv = document.getElementById("phrase");
 //const charUl = charDiv.firstElementChild;
