@@ -16,10 +16,10 @@
 
      createPhrases() {
          const randomPhrase = [
-             new Phrase('Team Treehouse Tech degree'),
-             new Phrase('Javascript is cool'),
-             new Phrase('Coding is fun'),
-             new Phrase('Object oriented programming') 
+             new Phrase('team treehouse tech degree'),
+             new Phrase('javascript is cool'),
+             new Phrase('coding is fun'),
+             new Phrase('object oriented programming')
          ];
          return randomPhrase;
      }
@@ -53,21 +53,26 @@
              keyPressedHTML.style.backgroundColor = '#f9a9a9';
              game.removeLife();
          }
+         this.checkForWin();
      }
 
      /**
       * Checks for winning move
-      * @return {boolean} True if game has been won, false if game wasn't
+      * @return {void} True if game has been won, false if game wasn't
       won
       */
      checkForWin() {
-         let phraseToCompare = this.activePhrase.phrase;
+         let phrase = this.activePhrase;
+         let phraseToCompare = phrase.split(' ').join('');
          let charsGuessed = document.getElementsByClassName('show');
+         console.log(phraseToCompare.length);
+         console.log(phraseToCompare);
+         console.log(charsGuessed.length);
          if (phraseToCompare.length === charsGuessed.length) {
-             return true;
-         } else {
-             return false;
+             console.log('won');
+             this.gameOver(true);
          }
+         console.log('checked for win');
      };
 
      /**
