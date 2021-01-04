@@ -10,7 +10,6 @@
      /**
       * Display phrase on game board
       */
-
      addPhraseToDisplay() {
         const phraseUl = document.getElementById('phrase');
         const char = this.phrase.split('');
@@ -35,11 +34,9 @@
       */
      checkLetter(letter) {
         for (let i = 0; i < game.activePhrase.length; i++) {
-            if (game.activePhrase.toLowerCase().includes(letter.toLowerCase())) {
-                this.showMatchedLetter(letter);
+            if (game.activePhrase.includes(letter)) {
                 return true;
             } else {
-                game.removeLife();
                 return false;
             }
         }

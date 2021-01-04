@@ -41,14 +41,16 @@
 
      handleInteraction(keyPressedHTML) {
          keyPressedHTML.disabled = true;
-         keyPressedHTML.style.backgroundColor = 'grey';
+         // keyPressedHTML.style.backgroundColor = 'grey';
          keyPressedHTML.style.cursor = 'no-drop';
          let keyPressedText = keyPressedHTML.innerText;
          phrase.checkLetter(keyPressedText);
          console.log(keyPressedText);
          if (phrase.checkLetter(keyPressedText)) {
+             keyPressedHTML.style.backgroundColor = '#a9f9c1';
              phrase.showMatchedLetter(keyPressedText);
-         } else {
+         } else if (!phrase.checkLetter(keyPressedText)){
+             keyPressedHTML.style.backgroundColor = '#f9a9a9';
              game.removeLife();
          }
      }
