@@ -47,10 +47,12 @@
          phrase.checkLetter(keyPressedText);
          console.log(keyPressedText);
          if (phrase.checkLetter(keyPressedText)) {
-             keyPressedHTML.style.backgroundColor = '#a9f9c1';
+             //keyPressedHTML.style.backgroundColor = '#a9f9c1';
+             keyPressedHTML.classList.toggle('chosen');
              phrase.showMatchedLetter(keyPressedText);
          } else if (!phrase.checkLetter(keyPressedText)){
-             keyPressedHTML.style.backgroundColor = '#f9a9a9';
+             // keyPressedHTML.style.backgroundColor = '#f9a9a9';
+             keyPressedHTML.classList.toggle('wrong');
              game.removeLife();
          }
          this.checkForWin();
@@ -119,7 +121,9 @@
              console.log(keys[i]);
              let key = keys[i];
              key.disabled = false;
-             key.style.backgroundColor = 'grey';
+             key.style.backgroundColor = '#f7a964';
+
+
 
      }
  }
