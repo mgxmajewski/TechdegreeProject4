@@ -113,12 +113,13 @@
      };
 
      keyboardReset() {
-         let keys = document.getElementsByClassName("key");
+         let keys = document.querySelectorAll(".key");
          console.log(keys);
-         for (let i = 0; i < keyboard.length; i++) {
+         for (let i = 0; i < keys.length; i++) {
              console.log(keys[i]);
              let key = keys[i];
-             key.innerText = 'z';
+             key.disabled = false;
+             key.style.backgroundColor = 'grey';
 
      }
  }
