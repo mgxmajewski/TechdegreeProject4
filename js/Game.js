@@ -112,6 +112,17 @@
          }
      };
 
+     keyboardReset() {
+         let keys = document.getElementsByClassName("key");
+         console.log(keys);
+         for (let i = 0; i < keyboard.length; i++) {
+             console.log(keys[i]);
+             let key = keys[i];
+             key.innerText = 'z';
+
+     }
+ }
+
      gameBoardReset() {
          let phraseToReset = document.getElementById("phrase");
          let usersLives = document.getElementsByClassName('tries');
