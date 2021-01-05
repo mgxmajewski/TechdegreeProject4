@@ -112,22 +112,27 @@
          }
      };
 
-     // gameBoardReset() {
-     //     // const phraseChars = game.activePhrase;
-     //     // for(let i = 0; i < phraseChars.length; i++){
-     //     //     let phraseChar = phraseChars[i];
-     //     //     //let liClassList = charLi.classList[0];
-     //     //     if(phraseChar) {
-     //             let charLi = document.getElementsByClassName(`letter`);
-     //                 console.log(charLi[0]);
-     //                 charLi[0].classList.remove('hide show');
-     //                 console.log(charLi[0]);
-     //             // charLi = `<li className="hide letter ${phraseChar}">b</li>`;
-     //             //console.log(liClassList);
-     //         //}
-     //     //}
-     //     // this.activePhrase = null;
-     //     // console.log(this.activePhrase);
+     gameBoardReset() {
+         let phraseToReset = document.getElementById("phrase");
+         console.log(phraseToReset);
+         phraseToReset.innerHTML = "";
+         console.log(phraseToReset);
+
+         // const phraseChars = game.activePhrase;
+         // for(let i = 0; i < phraseChars.length; i++){
+         //     let phraseChar = phraseChars[i];
+         //     //let liClassList = charLi.classList[0];
+         //     if(phraseChar) {
+         //         let phraseChars = document.getElementsByClassName(`letter`).item(0).classList;
+         //         let numOfCharsClassAttr = phraseChars.length;
+         //         console.log(phraseChars[numOfCharsClassAttr]);
+         //         console.log(numOfCharsClassAttr);
+                 // charLi = `<li className="hide letter ${phraseChar}">b</li>`;
+                 //console.log(liClassList);
+             //}
+         //}
+         // this.activePhrase = null;
+         // console.log(this.activePhrase);
      }
  }
 
