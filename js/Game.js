@@ -114,9 +114,16 @@
 
      gameBoardReset() {
          let phraseToReset = document.getElementById("phrase");
-         console.log(phraseToReset);
+         let usersLives = document.getElementsByClassName('tries');
+         for (let i =0; i < usersLives.length; i++) {
+             usersLives.item(i).firstChild.src = "images/liveHeart.png";
+         }
          phraseToReset.innerHTML = "";
-         console.log(phraseToReset);
+         this.activePhrase = null;
+         this.missed = 0;
+
+
+
 
          // const phraseChars = game.activePhrase;
          // for(let i = 0; i < phraseChars.length; i++){
@@ -131,8 +138,7 @@
                  //console.log(liClassList);
              //}
          //}
-         // this.activePhrase = null;
-         // console.log(this.activePhrase);
+
      }
  }
 
