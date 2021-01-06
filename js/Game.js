@@ -9,11 +9,11 @@
          this.activePhrase = null;
      }
 
-     /**
-* Creates phrases for use in game
-* @return {array} An array of phrases that could be used in the game
-*/
 
+     /**
+    * Creates phrases for use in game
+    * @return {array} An array of phrases that could be used in the game
+    */
      createPhrases() {
          const randomPhrase = [
              new Phrase('team treehouse tech degree'),
@@ -104,13 +104,13 @@
          const overlayDiv = document.getElementById(`overlay`);
          const gameOverMessage = document.getElementById('game-over-message');
          overlayDiv.style.display = '';
-         overlayDiv.classList.remove('start');
+         overlayDiv.classList.toggle('start');
 
          if (gameWon === true) {
-             overlayDiv.classList.add('win');
+             overlayDiv.classList.toggle('win');
              gameOverMessage.innerText = 'WIN';
          } else {
-             overlayDiv.classList.add('lose');
+             overlayDiv.classList.toggle('lose');
              gameOverMessage.innerText = 'LOOSE';
          }
      };
@@ -139,6 +139,8 @@
      }
 
      gameReset () {
+         const overlayDiv = document.getElementById(`overlay`);
+         overlayDiv.className = '';
          this.keyboardReset();
          this.phraseReset();
          this.livesReset();
