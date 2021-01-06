@@ -115,34 +115,34 @@
          }
      };
 
+     keyboardReset ()  {
+         for (let i = 0; i < keyboard.length; i++) {
+             let key = keyboard[i];
+             key.disabled = false;
+             key.style = '';
+             key.className= 'key';
+         }
+     }
 
-     gameBoardReset() {
+     phraseReset () {
          let phraseToReset = document.getElementById("phrase");
+         phraseToReset.innerHTML = "";
+         this.activePhrase = null;
+     }
+
+     livesReset() {
          let usersLives = document.getElementsByClassName('tries');
          for (let i =0; i < usersLives.length; i++) {
              usersLives.item(i).firstChild.src = "images/liveHeart.png";
          }
-         phraseToReset.innerHTML = "";
-         this.activePhrase = null;
          this.missed = 0;
+     }
 
-
-
-
-         // const phraseChars = game.activePhrase;
-         // for(let i = 0; i < phraseChars.length; i++){
-         //     let phraseChar = phraseChars[i];
-         //     //let liClassList = charLi.classList[0];
-         //     if(phraseChar) {
-         //         let phraseChars = document.getElementsByClassName(`letter`).item(0).classList;
-         //         let numOfCharsClassAttr = phraseChars.length;
-         //         console.log(phraseChars[numOfCharsClassAttr]);
-         //         console.log(numOfCharsClassAttr);
-                 // charLi = `<li className="hide letter ${phraseChar}">b</li>`;
-                 //console.log(liClassList);
-             //}
-         //}
-
+     gameReset () {
+         this.keyboardReset();
+         this.phraseReset();
+         this.livesReset();
+         this.startGame();
      }
  }
 

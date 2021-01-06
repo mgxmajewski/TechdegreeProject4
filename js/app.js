@@ -11,20 +11,11 @@ for (let key of keyboard) {
     key.addEventListener("click", (e) => {
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
-            keyPressedHTML.classList.toggle('btn__reset:active')
             return game.handleInteraction(keyPressedHTML);
         }
     })
 }
 
-const keyboardReset = () => {
-    for (let i = 0; i < keyboard.length; i++) {
-        let key = keyboard[i];
-        key.disabled = false;
-        key.style = '';
-        key.className= 'key';
-    }
-}
 
 
 
@@ -59,7 +50,7 @@ const keyboardReset = () => {
 // const phrase = new Phrase(randomPhrase.phrase);
 // phrase.addPhraseToDisplay();
 
-document.getElementById("btn__reset").addEventListener('click', () => game.startGame());
+document.getElementById("btn__reset").addEventListener('click', () => game.gameReset());
 // const letters = new Phrase ();
 // phrase.checkLetter();
 
