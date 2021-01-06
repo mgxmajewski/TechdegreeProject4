@@ -56,6 +56,7 @@
              game.removeLife();
          }
          this.checkForWin();
+         console.log(keyPressedHTML);
      }
 
      /**
@@ -114,19 +115,6 @@
          }
      };
 
-     keyboardReset() {
-         let keys = document.querySelectorAll(".key");
-         console.log(keys);
-         for (let i = 0; i < keys.length; i++) {
-             console.log(keys[i]);
-             let key = keys[i];
-             key.disabled = false;
-             key.style.backgroundColor = '#f7a964';
-
-
-
-     }
- }
 
      gameBoardReset() {
          let phraseToReset = document.getElementById("phrase");

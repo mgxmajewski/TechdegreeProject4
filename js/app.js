@@ -5,17 +5,28 @@
        
 const game = new Game();
 const phrase = new Phrase();
-
-
 const keyboard = document.querySelectorAll(".key");
+
 for (let key of keyboard) {
     key.addEventListener("click", (e) => {
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
+            keyPressedHTML.classList.toggle('btn__reset:active')
             return game.handleInteraction(keyPressedHTML);
         }
     })
 }
+
+const keyboardReset = () => {
+    for (let i = 0; i < keyboard.length; i++) {
+        let key = keyboard[i];
+        key.disabled = false;
+        key.style = '';
+        key.className= 'key';
+    }
+}
+
+
 
 // function handleInteraction(keyPressedHTML) {
 //     keyPressedHTML.disabled = true;
