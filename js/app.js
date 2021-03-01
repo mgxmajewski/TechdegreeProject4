@@ -6,12 +6,11 @@
 const game = new Game();
 const phrase = new Phrase();
 const keyboard = document.querySelectorAll(".key");
+const usedKeysArray = [];
 
 
 for (let key of keyboard) {
     key.addEventListener("click", (e) => {
-        console.log(e);
-        console.log(e.target);
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
             //keyPressedHTML.classList.toggle('btn__reset:active');
@@ -22,11 +21,15 @@ for (let key of keyboard) {
 
 window.addEventListener('keydown', (e) => {
     console.log(e.key);
-    for (let key of keyboard) {
-        if (key.innerText === e.key){
-            return game.handleInteraction(key);
+    if(!usedKeysArray.includes(e.key)) {
+        for (let key of keyboard) {
+            if (key.innerText === e.key){
+                usedKeysArray.push(e.key);
+                return game.handleInteraction(key);
+            }
         }
     }
+
 })
 
 // for (let key of keyboard) {
