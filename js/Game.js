@@ -35,7 +35,6 @@
          const phrase = new Phrase(randomPhrase.phrase);
          this.activePhrase = phrase.phrase;
          phrase.addPhraseToDisplay();
-         console.log(this.activePhrase);
          //console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
      }
 
@@ -56,7 +55,6 @@
              game.removeLife();
          }
          this.checkForWin();
-         console.log(keyPressedHTML);
      }
 
      /**
@@ -68,14 +66,9 @@
          let phrase = this.activePhrase;
          let phraseToCompare = phrase.split(' ').join('');
          let charsGuessed = document.getElementsByClassName('show');
-         console.log(phraseToCompare.length);
-         console.log(phraseToCompare);
-         console.log(charsGuessed.length);
          if (phraseToCompare.length === charsGuessed.length) {
-             console.log('won');
              this.gameOver(true);
          }
-         console.log('checked for win');
      };
 
      /**
@@ -88,8 +81,6 @@
          let missedGuesses = this.missed;
          let usersLives = document.getElementsByClassName('tries');
          usersLives.item(missedGuesses).firstChild.src = "images/lostHeart.png";
-         console.log(this.missed);
-         console.log(usersLives);
          this.missed++;
          if (this.missed === livesMissedGameOver) {
              this.gameOver(false);

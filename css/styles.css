@@ -1,5 +1,6 @@
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
 /* Variables */
 
@@ -10,17 +11,18 @@
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
-  --color-keys-light: #E5E5E5;
+  --color-keys-light: #e5e5e5;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
+
 }
 
 /* main */
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Courier New', sans-serif;
 }
 
 body {
@@ -28,7 +30,11 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-color: #000e33;
 }
+
+
+
 
 li, ol, ul {
   padding: 0;
@@ -60,6 +66,7 @@ button {
   cursor: pointer;
 }
 
+
 #btn__reset {
 	width: 200px;
 	margin: 0 auto;
@@ -86,7 +93,9 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #b4ff92;
+  --animate-duration: 2s;
+  --animate-repeat: 2;
 }
 
 
@@ -118,8 +127,8 @@ button {
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   border-radius: 5px;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 

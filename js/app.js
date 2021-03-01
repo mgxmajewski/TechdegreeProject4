@@ -8,11 +8,11 @@ const phrase = new Phrase();
 const keyboard = document.querySelectorAll(".key");
 const usedKeysArray = [];
 
-
 for (let key of keyboard) {
     key.addEventListener("click", (e) => {
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
+            usedKeysArray.push(e);
             //keyPressedHTML.classList.toggle('btn__reset:active');
             return game.handleInteraction(keyPressedHTML);
         }
@@ -20,8 +20,7 @@ for (let key of keyboard) {
 }
 
 window.addEventListener('keydown', (e) => {
-    console.log(e.key);
-    if(!usedKeysArray.includes(e.key)) {
+    if(!usedKeysArray.includes(e.key)){
         for (let key of keyboard) {
             if (key.innerText === e.key){
                 usedKeysArray.push(e.key);
@@ -31,4 +30,15 @@ window.addEventListener('keydown', (e) => {
     }
 })
 
-document.getElementById("btn__reset").addEventListener('click', () => game.gameReset());
+function animateHeader() {
+    const header = document.querySelector('.header');
+    console.log(header);
+    header.classList.add('animate__animated', 'animate__flash');
+}
+
+
+
+document.getElementById("btn__reset").addEventListener('click', () => {
+    game.gameReset();
+    animateHeader();
+});
