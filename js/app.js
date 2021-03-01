@@ -36,6 +36,11 @@ function animateHeader() {
     header.classList.add('animate__animated', 'animate__flash');
 }
 
+function hideHeader() {
+    const header = document.querySelector('.header');
+    header.remove();
+}
+
 
 
 document.getElementById("btn__reset").addEventListener('click', () => {

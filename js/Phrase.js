@@ -50,7 +50,6 @@
          const phraseChars = game.activePhrase;
          for(let i = 0; i < phraseChars.length; i++){
              let phraseChar = phraseChars[i];
-             console.log('test console');
              //let liClassList = charLi.classList[0];
             if(phraseChar === letter) {
                 let charLi = document.getElementsByClassName(`hide letter ${phraseChar}`);
@@ -58,8 +57,6 @@
                     charLi.item(0).classList.add('show');
                     charLi[0].classList.remove('hide');
                 }
-                // charLi = `<li className="hide letter ${phraseChar}">b</li>`;
-                //console.log(liClassList);
             }
          }
      }

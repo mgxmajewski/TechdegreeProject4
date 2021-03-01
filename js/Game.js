@@ -44,7 +44,6 @@
          keyPressedHTML.style.cursor = 'no-drop';
          let keyPressedText = keyPressedHTML.innerText;
          phrase.checkLetter(keyPressedText);
-         console.log(keyPressedText);
          if (phrase.checkLetter(keyPressedText)) {
              //keyPressedHTML.style.backgroundColor = '#a9f9c1';
              keyPressedHTML.classList.toggle('chosen');
@@ -94,15 +93,19 @@
      gameOver(gameWon) {
          const overlayDiv = document.getElementById(`overlay`);
          const gameOverMessage = document.getElementById('game-over-message');
+         const title = document.querySelector('.title');
          overlayDiv.style.display = '';
          overlayDiv.classList.toggle('start');
 
          if (gameWon === true) {
              overlayDiv.classList.toggle('win');
              gameOverMessage.innerText = 'WIN';
+             title.remove();
+
          } else {
              overlayDiv.classList.toggle('lose');
              gameOverMessage.innerText = 'LOOSE';
+             title.remove();
          }
      };
 
