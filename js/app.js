@@ -7,14 +7,47 @@ const game = new Game();
 const phrase = new Phrase();
 const keyboard = document.querySelectorAll(".key");
 
+
 for (let key of keyboard) {
     key.addEventListener("click", (e) => {
+        console.log(e);
+        console.log(e.target);
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
+            //keyPressedHTML.classList.toggle('btn__reset:active');
             return game.handleInteraction(keyPressedHTML);
         }
     })
 }
+
+window.addEventListener('keydown', (e) => {
+    console.log(e.key);
+    for (let key of keyboard) {
+        if (key.innerText === e.key){
+            return game.handleInteraction(key);
+        }
+    }
+})
+
+// for (let key of keyboard) {
+//     key.addEventListener("mouseover", (e) => {
+//         if (e.target.classList.contains("key")) {
+//             let keyPressedHTML = e.target;
+//             keyPressedHTML.classList.toggle('active');
+//         }
+//     })
+// }
+//
+// for (let key of keyboard) {
+//     key.addEventListener("mouseout", (e) => {
+//         if (e.target.classList.contains("key")) {
+//             let keyPressedHTML = e.target;
+//             //keyPressedHTML.classList.toggle('btn__reset');
+//             key.style = '';
+//             key.className= 'key';
+//         }
+//     })
+// }
 
 
 

@@ -9,7 +9,6 @@
          this.activePhrase = null;
      }
 
-
      /**
     * Creates phrases for use in game
     * @return {array} An array of phrases that could be used in the game
@@ -19,7 +18,8 @@
              new Phrase('team treehouse tech degree'),
              new Phrase('javascript is cool'),
              new Phrase('coding is fun'),
-             new Phrase('object oriented programming')
+             new Phrase('object oriented programming'),
+             new Phrase('clean code')
          ];
          return randomPhrase;
      }
