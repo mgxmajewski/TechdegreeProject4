@@ -93,19 +93,16 @@
      gameOver(gameWon) {
          const overlayDiv = document.getElementById(`overlay`);
          const gameOverMessage = document.getElementById('game-over-message');
-         const title = document.querySelector('.title');
          overlayDiv.style.display = '';
          overlayDiv.classList.toggle('start');
 
          if (gameWon === true) {
              overlayDiv.classList.toggle('win');
              gameOverMessage.innerText = 'WIN';
-             title.remove();
 
          } else {
              overlayDiv.classList.toggle('lose');
              gameOverMessage.innerText = 'LOOSE';
-             title.remove();
          }
      };
 
@@ -136,7 +133,6 @@
 
      gameReset (array) {
          usedKeysArrayReset(array);
-         console.log(array);
          const overlayDiv = document.getElementById(`overlay`);
          overlayDiv.className = '';
          this.keyboardReset();
