@@ -132,7 +132,11 @@
          this.missed = 0;
      }
 
-     gameReset () {
+
+
+     gameReset (array) {
+         usedKeysArrayReset(array);
+         console.log(array);
          const overlayDiv = document.getElementById(`overlay`);
          overlayDiv.className = '';
          this.keyboardReset();

@@ -6,7 +6,7 @@
 const game = new Game();
 const phrase = new Phrase();
 const keyboard = document.querySelectorAll(".key");
-const usedKeysArray = [];
+let usedKeysArray = [];
 
 for (let key of keyboard) {
     key.addEventListener("click", (e) => {
@@ -20,6 +20,7 @@ for (let key of keyboard) {
 }
 
 window.addEventListener('keydown', (e) => {
+
     if(!usedKeysArray.includes(e.key)){
         for (let key of keyboard) {
             if (key.innerText === e.key){
@@ -36,14 +37,14 @@ function animateHeader() {
     header.classList.add('animate__animated', 'animate__flash');
 }
 
-function hideHeader() {
-    const header = document.querySelector('.header');
-    header.remove();
+
+function usedKeysArrayReset(array) {
+    while(array.length > 0) {
+        array.pop();
+    }
 }
 
-
-
 document.getElementById("btn__reset").addEventListener('click', () => {
-    game.gameReset();
+    game.gameReset(usedKeysArray);
     animateHeader();
 });
