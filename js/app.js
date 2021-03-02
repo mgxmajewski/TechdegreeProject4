@@ -12,7 +12,8 @@ for (let key of keyboard) {
     key.addEventListener("click", (e) => {
         if (e.target.classList.contains("key")) {
             let keyPressedHTML = e.target;
-            usedKeysArray.push(e);
+            console.log(e.target.innerText);
+            usedKeysArray.push(e.target.innerText);
             //keyPressedHTML.classList.toggle('btn__reset:active');
             return game.handleInteraction(keyPressedHTML);
         }
@@ -37,6 +38,10 @@ function animateHeader() {
     header.classList.add('animate__animated', 'animate__flash');
 }
 
+function hideHeader() {
+    const header = document.querySelector('.header');
+    header.remove();
+}
 
 function usedKeysArrayReset(array) {
     while(array.length > 0) {
